@@ -1,5 +1,44 @@
 #!/usr/bin/env node
 var kexec = require('kexec');
+var path  = require('path');
+var fs    = require('fs');
+var ld    = require('lodash');
+
+function ancestry_for(p) {
+  var ancestry = [];
+  var current_p;
+  do {
+    current_p = p;
+    ancestry.push(current_p);
+    p = path.dirname(current_p);
+  } while(current_p !== p);
+
+  return ancestry;
+}
+
+function potential_bin_paths_for(p) {
+  return ld.map(ancestry_for(p), function(a) {
+    return path.join(a, "node_modules", ".bin");
+  });
+}
+
+function bin_paths_for(p) {
+  var potential = potential_bin_paths_for(p);
+  return ld.select(potential, function(pp) {
+    try {
+      fs.readdirSync(pp);
+      return true;
+    } catch(e) {
+      return false;
+    }
+  });
+}
+
+var PATH_comps = bin_paths_for(process.cwd());
+PATH_comps.push(process.env["PATH"]);
+
+process.env["PATH"] = PATH_comps.join(path.delimiter);
+
 
 var cmd  = process.argv[2];
 var argv = process.argv.slice(3, process.argv.length);
