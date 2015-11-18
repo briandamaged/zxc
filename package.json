@@ -1,5 +1,5 @@
 {
-  "name": "xcz",
+  "name": "zxc",
   "version": "0.1.0",
   "description": "'bundle exec' for NodeJS",
   "main": "src/index.js",
@@ -8,7 +8,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+ssh://git@github.com/briandamaged/xcz.git"
+    "url": "git+ssh://git@github.com/briandamaged/zxc.git"
   },
   "keywords": [
     "bundle",
@@ -17,9 +17,9 @@
   "author": "Brian Lauber",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/briandamaged/xcz/issues"
+    "url": "https://github.com/briandamaged/zxc/issues"
   },
-  "homepage": "https://github.com/briandamaged/xcz#readme",
+  "homepage": "https://github.com/briandamaged/zxc#readme",
   "dependencies": {
     "kexec": "^1.3.0"
   }
