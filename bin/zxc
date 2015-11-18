@@ -1,0 +1,7 @@
+#!/usr/bin/env node
+var kexec = require('kexec');
+
+var cmd  = process.argv[2];
+var argv = process.argv.slice(3, process.argv.length);
+
+kexec(cmd, argv);

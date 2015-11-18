@@ -19,5 +19,8 @@
   "bugs": {
     "url": "https://github.com/briandamaged/xcz/issues"
   },
-  "homepage": "https://github.com/briandamaged/xcz#readme"
+  "homepage": "https://github.com/briandamaged/xcz#readme",
+  "dependencies": {
+    "kexec": "^1.3.0"
+  }
 }
