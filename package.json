@@ -20,6 +20,9 @@
     "url": "https://github.com/briandamaged/zxc/issues"
   },
   "homepage": "https://github.com/briandamaged/zxc#readme",
+  "bin": {
+    "zxc": "./bin/zxc"
+  },
   "dependencies": {
     "kexec": "^1.3.0",
     "lodash": "^3.10.1"
