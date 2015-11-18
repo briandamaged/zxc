@@ -1,0 +1,23 @@
+{
+  "name": "xcz",
+  "version": "0.1.0",
+  "description": "'bundle exec' for NodeJS",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/briandamaged/xcz.git"
+  },
+  "keywords": [
+    "bundle",
+    "exec"
+  ],
+  "author": "Brian Lauber",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/briandamaged/xcz/issues"
+  },
+  "homepage": "https://github.com/briandamaged/xcz#readme"
+}
